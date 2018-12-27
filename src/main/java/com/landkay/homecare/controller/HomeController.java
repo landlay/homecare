@@ -1,5 +1,6 @@
 package com.landkay.homecare.controller;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @Description: TODO
  * @date 2018/12/2714:08
  */
-@RestController
+@Controller
 public class HomeController {
 
 
@@ -24,6 +25,18 @@ public class HomeController {
      **/
     @RequestMapping(value = "/home",method = RequestMethod.GET)
     public String homePage(){
-        return "/home.html";
+        return "/home";
+    }
+
+    /**
+     * Description 跳转到工匠详细页
+     * @param
+     * @author landkay
+     * @Date 14:16 2018/12/27
+     * @return
+     **/
+    @RequestMapping(value = "/workDetail",method = RequestMethod.GET)
+    public String workDetailPage(){
+        return "/workDetail";
     }
 }

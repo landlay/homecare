@@ -7,6 +7,7 @@ server:
     max-threads: 0
     uri-encoding: UTF-8
 
+
 spring:
   profiles:
     active: dev
@@ -15,6 +16,14 @@ spring:
   http:
     encoding:
       charset: UTF-8
+  # 定位模板的目录
+  mvc:
+    view:
+      prefix: /static/
+      # 给返回的页面添加后缀名
+      suffix: .html
+    thymeleaf:
+      cash: false
 
 
 mybatis:
